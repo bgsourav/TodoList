@@ -13,7 +13,7 @@ const generate = (todo) => {
     div.innerHTML += html;
 
 }
-
+if(addform){
 addform.addEventListener('submit', e => {
 
     e.preventDefault();
@@ -24,9 +24,9 @@ addform.addEventListener('submit', e => {
         addform.reset();
 
     }
-});
+});}
 
-
+if(div){
 div.addEventListener('click', e => {
 
     if (e.target.classList.contains('btn')) {
@@ -36,12 +36,8 @@ div.addEventListener('click', e => {
     if (e.target.classList.contains('flex')) {
         e.target.classList.toggle('checked');
       }
-});
-
-
-
-
-	return (
+});}
+return (
 		<div>
 			<h1 class="title">TODO LIST</h1>
 			<form class="add">
