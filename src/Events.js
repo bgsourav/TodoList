@@ -2,44 +2,43 @@ import React from 'react';
 import './event.css'
 
 const Events = () => {
-	const addthis = document.querySelector(".add");
-	const div = document.querySelector(".main")
+	const addform = document.querySelector(".add");
+const div = document.querySelector(".main")
 
-	const generate = (todo) => {
-		const html = `<div class="a">
-		<span  class="btn">x</span>
-		<h3 class="flex">${todo}</h3>
-		</div>`;
-		div.innerHTML += html;
+const generate = (todo) => {
+    const html = `<div class="a">
+    <span  class="btn">x</span>
+    <h3 class="flex">${todo}</h3>
+    </div>`;
+    div.innerHTML += html;
 
-	}
-	if(addthis)
-	{
-	addthis.addEventListener('submit', (e) => {
+}
 
-		e.preventDefault();
-		const todo = addthis.add.value.trim();
+addform.addEventListener('submit', e => {
 
-		if (todo.length) {
-			generate(todo);
-			addthis.reset();
+    e.preventDefault();
+    const todo = addform.add.value.trim();
 
-		}
-	});
-	}
-	if(div){
-	div.addEventListener('click', (e) => {
+    if (todo.length) {
+        generate(todo);
+        addform.reset();
 
-		if (e.target.classList.contains('btn')) {
-			e.target.parentElement.remove();
-		}
+    }
+});
 
-		if (e.target.classList.contains('flex')) {
-			e.target.classList.toggle('checked');
-		}
-	});
 
-	}
+div.addEventListener('click', e => {
+
+    if (e.target.classList.contains('btn')) {
+        e.target.parentElement.remove();
+    }
+
+    if (e.target.classList.contains('flex')) {
+        e.target.classList.toggle('checked');
+      }
+});
+
+
 
 
 	return (
