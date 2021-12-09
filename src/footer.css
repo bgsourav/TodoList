@@ -1,0 +1,16 @@
+#footer{
+    width: 100vw;
+    height:10vh;
+    background-color: rgb(34, 4, 63);
+    color: ivory;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* #footer h4{
+} */
+
+.socialmedia ul a {
+    margin-right: 1rem;
+    font-size: x-large;
+}

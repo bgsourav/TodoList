@@ -1,0 +1,17 @@
+#home_container{
+    width: 100%;
+    height: fit-content;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    text-align: center;
+}
+
+p{
+    font-weight: 500;
+}
+
+#lorem_home{
+    padding: 2rem;
+}
