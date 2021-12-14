@@ -45,7 +45,7 @@ const Events = () => {
 
 	})
 	return (
-		<body>
+		
 		<div>
 			<h1 class="title">TODO LIST</h1>
 			<form class="add">
@@ -66,7 +66,7 @@ const Events = () => {
 				</div>
 			</div>
 		</div>
-		</body>
+	
 	);
 };
 

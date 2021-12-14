@@ -34,7 +34,7 @@ const ContactForm = () => {
     xhr.send(JSON.stringify(formData));
     }
     return (
-        <body className="todo">
+       
         <div className="form-container" align="center">
             <form className="contact-form" align="center">
                 <h1 style={{color:"black",fontSize:"xxlarge"}}>Contact Us</h1>
@@ -46,7 +46,7 @@ const ContactForm = () => {
             </form>
         </div>
         
-        </body>
+       
     )
 }
 
