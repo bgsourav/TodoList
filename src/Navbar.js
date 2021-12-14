@@ -7,7 +7,7 @@ const Navbar = () => {
         <div id="nav_container">
             <nav className="main-nav">
                 <div className="logo">
-                    <h3>Todolist</h3>
+                    <h3><a href = "/">Todolist</a></h3>
                 </div>
                 <div className="menu">
                     <ul>

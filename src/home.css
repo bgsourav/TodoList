@@ -15,3 +15,8 @@ p{
 #lorem_home{
     padding: 2rem;
 }
+.image{
+    width: 40%;
+    height: 18%;
+    box-shadow: rgb(172, 94, 94) 3px 3px 3px 3px,rgb(172, 94, 94) 2px 2px 2px 2px ;
+}

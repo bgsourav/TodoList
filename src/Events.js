@@ -1,43 +1,51 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './event.css'
+// import './todo.js'
+
+
 
 const Events = () => {
-	const addform = document.querySelector(".add");
-const div = document.querySelector(".main")
+	useEffect(() => {
+		const addform = document.querySelector(".add");
+		const div = document.querySelector(".main")
 
-const generate = (todo) => {
-    const html = `<div class="a">
+		const generate = (todo) => {
+			const html = `<li class="a">
     <span  class="btn">x</span>
     <h3 class="flex">${todo}</h3>
-    </div>`;
-    div.innerHTML += html;
+    </li>`;
+			div.innerHTML += html;
 
-}
-if(addform){
-addform.addEventListener('submit', e => {
+		}
 
-    e.preventDefault();
-    const todo = addform.add.value.trim();
 
-    if (todo.length) {
-        generate(todo);
-        addform.reset();
+		addform.addEventListener('submit', e => {
 
-    }
-});}
+			e.preventDefault();
+			const todo = addform.add.value.trim();
 
-if(div){
-div.addEventListener('click', e => {
+			if (todo.length) {
+				generate(todo);
+				addform.reset();
 
-    if (e.target.classList.contains('btn')) {
-        e.target.parentElement.remove();
-    }
+			}
+		});
 
-    if (e.target.classList.contains('flex')) {
-        e.target.classList.toggle('checked');
-      }
-});}
-return (
+
+		div.addEventListener('click', e => {
+
+			if (e.target.classList.contains('btn')) {
+				e.target.parentElement.remove();
+			}
+
+			if (e.target.classList.contains('flex')) {
+				e.target.classList.toggle('checked');
+			}
+		});
+
+	})
+	return (
+		<body>
 		<div>
 			<h1 class="title">TODO LIST</h1>
 			<form class="add">
@@ -46,18 +54,19 @@ return (
 			<div class="main">
 				<div class="a">
 					<span class="btn">x</span>
-					<h3 class="flex">AFLL quix</h3>
+					<h3 class="flex">AFLL quiz</h3>
 				</div>
 				<div class="a">
 					<span class="btn">x</span>
-					<h3 class="flex">DDCO quix</h3>
+					<h3 class="flex">DDCO quiz</h3>
 				</div>
 				<div class="a">
 					<span class="btn">x</span>
-					<h3 class="flex">DSA quix</h3>
+					<h3 class="flex">DSA quiz</h3>
 				</div>
 			</div>
 		</div>
+		</body>
 	);
 };
 

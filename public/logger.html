@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="formtype">
+        <form class="login-form">
+            <h1>Contact Us</h1>
+            <input type="text" id="Logname" placeholder="Name"><br>
+            <input type="email" id = "Logemail" placeholder="Email"><br>
+            <input type="submit" class = "submit" value="Send">
+        </form>
+    </div>
+    <script type="text/babel">
+    const LogForm = document.querySelector('.login-form');
+    let logname = document.getElementById('Logname');
+    let logemail = document.getElementById('Logemail');
+    LogForm.addEventListener('submit',(sub)=>{
+        sub.preventDefault();
+        let logdata = {
+            name:logname.value,
+            email:logemail.value
+        }
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST','http://localhost:3000/');
+    xhr.setRequestHeader('content-type','application/json');
+    xhr.onload = function()
+    {
+        console.log(xhr.responseText);
+        if(xhr.responseText === 'success')
+        {
+            alert('You are now logged in!');
+            setNam('');
+            setEmail('');
+        }else{
+            alert('ERROR Please Try again');
+        }
+    }
+        xhr.send(JSON.stringify(logdata));
+    })
+
+    </script>
+</body>
+</html>

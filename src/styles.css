@@ -1,24 +1,27 @@
-@keyframes change{
-    0%{
-        background-position: 0% 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0% 50%;
-    }
+.todo
+{
+    width: 100%;
+    height: 100%;
+    background-image: url('https://media.istockphoto.com/photos/concept-of-an-open-magic-book-open-pages-with-water-and-land-and-picture-id1279460648?b=1&k=20&m=1279460648&s=170667a&w=0&h=uZa830sWo8hlFN0Y7FnQ14giNC0Z2EBNuTMuNJeJhQg=');
+    background-size: 100% 100%;
+    height: fit-content;
+    position: relative;
 }
 .form-container{
+    position: relative;
     width:60%;
-    height:100%;
+    height:50%;
+    padding-left: 20%;
     text-align: center;
+    
+
 }
+
 .contactform{
     position: absolute;
     width:80%;
-    height:70%;
-    padding-top: 10%;
+    height:50%;
+    padding-top: 1%;
 }
 input,textarea{
     background: white;
@@ -32,8 +35,8 @@ input,textarea{
 .submit{
     background:#0066A2;
     color:white;
-    padding: 2%;
-    width: 37%;
+    padding: 1%;
+    width: 25%;
     font-size: large;
     text-align:center;
     border-radius: 2em;
@@ -45,7 +48,7 @@ input,textarea{
 ::placeholder{
     color: red;
     opacity: 0.8;
-    font-size: x-large;
+    font-size: 98%;
 }
 button{
     background:#0066A2;

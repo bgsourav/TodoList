@@ -5,6 +5,7 @@ const Home = () => {
 		<div id="home_container">
 			<h1>Welcome to our Website</h1>
 			<hr />
+			<img className="image" src="https://th.bing.com/th/id/OIP.PYipJ_hSncugM2SwnZitvgHaEK?w=800&h=500&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="error loading image" />
 			<div id="lorem_home">
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 				Consequuntur voluptates voluptatum voluptate commodi placeat?

@@ -36,11 +36,11 @@
             width: 60%;
             border: 3px solid #73AD21;
             padding: 10px;
-
+            list-style: none;
         }
 
         body {
-            background: linear-gradient(-90deg, #4c5353, skyblue, thistle, #4c5353);
+            background: linear-gradient(-90deg, #1ed2d2, rgb(235, 233, 135), thistle, #7fa7a7);
             background-size: 1000% 1000%;
             height: fit-content;
             position: relative;
